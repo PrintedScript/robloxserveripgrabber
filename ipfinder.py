@@ -44,7 +44,7 @@ while True:
             spacedip = TEMP[0] + " " + TEMP[1].split("\n")[0]
     
     os.system("cls")
-    print("github page: https://github.com/PrintedScript/robloxserveripgrabber/releases/tag/stable \n")
+    print("github page: https://github.com/PrintedScript/robloxserveripgrabber/releases \n")
     print("Grabbed server info from '"+logdir+LatestLog+"'")
     print("Last edited on: "+str(datetime.fromtimestamp(LastEditTime))+"\n")
     if loglines == None:
