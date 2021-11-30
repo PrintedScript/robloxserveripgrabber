@@ -21,6 +21,7 @@ while True:
             loglines = f.readlines()
         except:
             print(Fore.RED+"FAILED TO READ LOG FILE, please send the log file to SomethingElse#0024 so I can fix this.")
+            loglines = []
 
     jobid = Fore.RED+"failed"+Style.RESET_ALL
     placeid = Fore.RED+"failed"+Style.RESET_ALL
