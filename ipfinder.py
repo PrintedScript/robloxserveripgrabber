@@ -20,7 +20,6 @@ while True:
         try:
             loglines = f.readlines()
         except:
-            print(Fore.RED+"FAILED TO READ LOG FILE, please send the log file to SomethingElse#0024 so I can fix this.")
             loglines = []
 
     jobid = Fore.RED+"failed"+Style.RESET_ALL
@@ -44,6 +43,7 @@ while True:
     print("github page: https://github.com/PrintedScript/robloxserveripgrabber/releases/tag/stable \n")
     print("Grabbed server info from '"+logdir+LatestLog+"'")
     print("Last edited on: "+str(datetime.fromtimestamp(LastEditTime))+"\n")
+    print(Fore.RED+"FAILED TO READ LOG FILE, please send the log file to SomethingElse#0024 so I can fix this."+"\n"+Style.RESET_ALL)
     print("PlaceId "+Fore.LIGHTCYAN_EX+placeid+Style.RESET_ALL+" | jobid "+Fore.LIGHTMAGENTA_EX+jobid+Style.RESET_ALL)
     print("Server IP: "+Fore.LIGHTGREEN_EX+serverip+Style.RESET_ALL)
     print("Formatted IP: "+Fore.GREEN+spacedip+Style.RESET_ALL+"\n")
