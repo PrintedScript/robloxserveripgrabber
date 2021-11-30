@@ -17,7 +17,10 @@ while True:
             LatestLog = logfile
 
     with open(logdir+LatestLog,"r",encoding="utf8") as f:
-        loglines = f.readlines()
+        try:
+            loglines = f.readlines()
+        except:
+            print(Fore.RED+"FAILED TO READ LOG FILE, please send the log file to SomethingElse#0024 so I can fix this.")
 
     jobid = Fore.RED+"failed"+Style.RESET_ALL
     placeid = Fore.RED+"failed"+Style.RESET_ALL
@@ -37,7 +40,7 @@ while True:
             spacedip = TEMP[0] + " " + TEMP[1].split("\n")[0]
     
     os.system("cls")
-    print("made by SomethingElse#0024")
+    print("github page: https://github.com/PrintedScript/robloxserveripgrabber/releases/tag/stable \n")
     print("Grabbed server info from '"+logdir+LatestLog+"'")
     print("Last edited on: "+str(datetime.fromtimestamp(LastEditTime))+"\n")
     print("PlaceId "+Fore.LIGHTCYAN_EX+placeid+Style.RESET_ALL+" | jobid "+Fore.LIGHTMAGENTA_EX+jobid+Style.RESET_ALL)
