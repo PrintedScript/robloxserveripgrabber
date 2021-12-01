@@ -44,13 +44,18 @@ while True:
             spacedip = TEMP[0] + " " + TEMP[1].split("\n")[0]
     
     os.system("cls")
-    print("github page: https://github.com/PrintedScript/robloxserveripgrabber/releases \n")
-    print("Grabbed server info from '"+logdir+LatestLog+"'")
-    print("Last edited on: "+str(datetime.fromtimestamp(LastEditTime))+"\n")
-    if loglines == None:
-        print(Fore.RED+"FAILED TO READ LOG FILE, please send the log file to SomethingElse#0024 so I can fix this."+"\n"+Style.RESET_ALL)
-    print("PlaceId "+Fore.LIGHTCYAN_EX+placeid+Style.RESET_ALL+" | jobid "+Fore.LIGHTMAGENTA_EX+jobid+Style.RESET_ALL)
-    print("Server IP: "+Fore.LIGHTGREEN_EX+serverip+Style.RESET_ALL)
-    print("Formatted IP: "+Fore.GREEN+spacedip+Style.RESET_ALL+"\n")
+    print(f"""
+    Github Repo: https://github.com/PrintedScript/robloxserveripgrabber/releases
 
-    input("Press Enter to grab latest log")
+    Log file directory '{logdir}{LatestLog}'
+    Last edited on: {str(datetime.fromtimestamp(LastEditTime))}
+
+    PlaceId {Fore.LIGHTCYAN_EX}{placeid}{Style.RESET_ALL} | jobid {Fore.LIGHTMAGENTA_EX}{jobid}{Style.RESET_ALL}
+    Server IP: {Fore.LIGHTGREEN_EX}{serverip}{Style.RESET_ALL}
+    IP and Port: {Fore.GREEN}{spacedip}{Style.RESET_ALL}
+
+    """)
+    if loglines == []:
+        print(Fore.RED+"FAILED TO READ LOG FILE, please send the log file to SomethingElse#0024 so I can fix this."+"\n"+Style.RESET_ALL)
+
+    input("    Press Enter to grab latest log")
